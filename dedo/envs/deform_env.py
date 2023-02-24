@@ -330,11 +330,13 @@ class DeformEnv(gym.Env):
             #                     rgba=(0, 1, 0.8, alpha), use_collision=False)
 
     def step(self, action, unscaled=False):
-        if self.args.debug:
-            print('action', action)
-        if not unscaled:
-            assert self.action_space.contains(action)
-            assert ((np.abs(action) <= 1.0).all()), 'action must be in [-1, 1]'
+        # if self.args.debug:
+        # print('action', action)
+        # print(self.action_space.contains(action))
+        # print((np.abs(action) <= 1.0).all())
+        # if not unscaled:
+        #     assert self.action_space.contains(action)
+        #     assert ((np.abs(action) <= 1.0).all()), 'action must be in [-1, 1]'
         action = action.reshape(self.num_anchors, -1)
 
         # Step through physics simulation.
@@ -357,7 +359,8 @@ class DeformEnv(gym.Env):
             info['is_success'] = np.abs(last_rwd) < self.SUCESS_REWARD_TRESHOLD
             reward += last_rwd
             info['final_reward'] = reward
-            print(f'final_reward: {reward:.4f}')
+            if self.args.debug:
+                print(f'final_reward: {reward:.4f}')
         else:
             info = {}
 

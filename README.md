@@ -1,4 +1,11 @@
 ![DEDO  - Dynamic Environments with Deformable Objects](images/imgs/header.jpg)
+
+### Performance Timing
+
+```bash
+python benchmark/test_envpool.py --env=HangGarment-v0 --num_envs=128 --cam_resolution=-1
+```
+
 ### DEDO  - Dynamic Environments with Deformable Objects
 DEDO is a lightweight and customizable suite of environments with
 deformable objects. It is aimed for researchers in the machine learning, 
