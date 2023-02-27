@@ -59,10 +59,10 @@ def main(args):
 
     vec_env.reset()
 
-    action = np.array([vec_env.action_space.sample() for _ in range(n_envs)])
     done = False
     t = time.perf_counter()
     for _ in tqdm.trange(total_step):
+        action = 2 * np.random.rand(n_envs, vec_env.action_space.shape[0]) - 1
         if n_envs == 1:
             if done:
                 done = False
