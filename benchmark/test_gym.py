@@ -29,6 +29,7 @@ import torch
 
 import time
 import tqdm
+import csv
 
 
 def main(args):
@@ -55,7 +56,7 @@ def main(args):
     print("action_space", vec_env.action_space)
 
     frame_skip = args.sim_steps_per_action
-    total_step = 1000
+    total_step = 1
 
     vec_env.reset()
 
@@ -71,7 +72,22 @@ def main(args):
                 done = vec_env.step(action)[2]
         else:
             vec_env.step(action)
-    print(f"FPS = {frame_skip * total_step * n_envs / (time.perf_counter() - t):.2f}")
+    # FPS
+    time_elapsed = time.perf_counter() - t
+    fps = frame_skip * total_step * n_envs / time_elapsed
+    print(f"FPS = {fps:.2f}")
+
+    fieldnames = ['n_envs', 'frame_skip', 'total_step', 'time_elapsed', 'fps']
+    # open the file in the write mode
+    with open('results.csv', 'a') as f:
+        # create the csv writer
+        writer = csv.writer(f)
+        # write header
+        # writer.writerow(fieldnames)
+        # data
+        row = [n_envs, frame_skip, total_step, time_elapsed, fps]
+        # write a row to the csv file
+        writer.writerow(row)
 
 
 if __name__ == "__main__":
