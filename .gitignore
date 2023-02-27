@@ -4,6 +4,7 @@ dedo/data/sewing_dataset/
 **/.idea
 wandb
 tmp_data
+**/.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
