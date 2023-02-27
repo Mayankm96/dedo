@@ -18,13 +18,17 @@ TASK_INFO = {
                 'bags/totes/bag1_0.obj',
                 'bags/totes/bag2_0.obj',
                 ],
-    'HangGarment': ['cloth/apron_0.obj',
+    'HangGarment': [
+                    'cloth/shirt_0.obj',
+                    # 'cloth/shirt_0_1.obj',
+                    # 'cloth/shirt_0_2.obj',
+                    'cloth/apron_0.obj',
                     'cloth/apron_1.obj',
                     'cloth/apron_2.obj',
                     'cloth/apron_3.obj',
                     'cloth/apron_4.obj',
 
-                    'cloth/shirt_0.obj',
+                    # 'cloth/shirt_0.obj',
                     'cloth/shirt_1.obj',
                     'cloth/shirt_2.obj',
                     'cloth/shirt_3.obj',
@@ -754,6 +758,50 @@ DEFORM_INFO = {
             [294],
             [3],
 
+        ],
+        'max_episode_len': 300,
+        'deform_true_loop_vertices': [
+            [0, 3, 5, 6, 8, 12, 13, 16, 18, 20, 237, 292, 294, 296, 298, 300,
+             303, 305, 307, 309, 311, 312, 519],
+        ],
+        'deform_texture_file': 'textures/deform/pb_leopard.png',
+        'plane_texture_file': 'textures/plane/cobblestone.jpg',
+        'rigid_texture_file': "textures/rigid/concrete.jpg",
+    },
+    'cloth/shirt_0_1.obj': {
+        'deform_init_pos': [0, 3, 4],  # [0, 0, 6]
+        'deform_init_ori': [np.pi / 2, 0, 0],
+        'deform_scale': 5,
+        'deform_elastic_stiffness': 90,
+        'deform_bending_stiffness': 0.1,
+        'deform_damping_stiffness': 0.01,
+        'deform_friction_coeff': 0.5,
+        'cam_viewmat': [7.2, -30, 323, -0.37, 1.08, 4.7],
+        'deform_anchor_vertices': [
+            [294],
+            [3],
+        ],
+        'max_episode_len': 300,
+        'deform_true_loop_vertices': [
+            [0, 3, 5, 6, 8, 12, 13, 16, 18, 20, 237, 292, 294, 296, 298, 300,
+             303, 305, 307, 309, 311, 312, 519],
+        ],
+        'deform_texture_file': 'textures/deform/pb_leopard.png',
+        'plane_texture_file': 'textures/plane/cobblestone.jpg',
+        'rigid_texture_file': "textures/rigid/concrete.jpg",
+    },
+    'cloth/shirt_0_2.obj': {
+        'deform_init_pos': [0, 3, 4],  # [0, 0, 6]
+        'deform_init_ori': [np.pi / 2, 0, 0],
+        'deform_scale': 5,
+        'deform_elastic_stiffness': 90,
+        'deform_bending_stiffness': 0.1,
+        'deform_damping_stiffness': 0.01,
+        'deform_friction_coeff': 0.5,
+        'cam_viewmat': [7.2, -30, 323, -0.37, 1.08, 4.7],
+        'deform_anchor_vertices': [
+            [294],
+            [3],
         ],
         'max_episode_len': 300,
         'deform_true_loop_vertices': [
