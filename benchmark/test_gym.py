@@ -56,7 +56,7 @@ def main(args):
     print("action_space", vec_env.action_space)
 
     frame_skip = args.sim_steps_per_action
-    total_step = 1
+    total_step = 1000
 
     vec_env.reset()
 
