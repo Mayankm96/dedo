@@ -56,7 +56,7 @@ class DeformEnv(gym.Env):
 
         # reset_bullet(args, self.sim, debug=args.debug)
         self.food_packing = self.args.env.startswith('FoodPacking')
-        self.num_anchors = 1 if self.food_packing else 2
+        self.num_anchors = 1
         res = self.load_objects(self.sim, self.args, debug=True)
         self.rigid_ids, self.deform_id, self.deform_obj, self.goal_pos = res
 
