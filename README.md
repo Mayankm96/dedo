@@ -1,10 +1,20 @@
-![DEDO  - Dynamic Environments with Deformable Objects](images/imgs/header.jpg)
+### Changelog
 
-### Performance Timing
+* Script for benchmarking the environment with random agent:
 
 ```bash
 python benchmark/test_envpool.py --env=HangGarment-v0 --num_envs=128 --cam_resolution=-1
 ```
+
+* Automated way to log the FPS into log files:
+
+```bash
+./benchmark/run_test.sh
+```
+
+---
+
+![DEDO  - Dynamic Environments with Deformable Objects](images/imgs/header.jpg)
 
 ### DEDO  - Dynamic Environments with Deformable Objects
 DEDO is a lightweight and customizable suite of environments with
