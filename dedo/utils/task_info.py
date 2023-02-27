@@ -19,8 +19,8 @@ TASK_INFO = {
                 'bags/totes/bag2_0.obj',
                 ],
     'HangGarment': [
-                    'cloth/shirt_0.obj',
-                    # 'cloth/shirt_0_1.obj',
+                    # 'cloth/shirt_0.obj',
+                    'cloth/shirt_0_1.obj',
                     # 'cloth/shirt_0_2.obj',
                     'cloth/apron_0.obj',
                     'cloth/apron_1.obj',
