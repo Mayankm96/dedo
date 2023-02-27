@@ -31,6 +31,9 @@ import time
 import tqdm
 import csv
 
+import warnings
+warnings.filterwarnings("ignore")
+
 
 def main(args):
     np.random.seed(args.seed)
